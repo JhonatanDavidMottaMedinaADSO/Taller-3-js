@@ -1,38 +1,23 @@
 addEventListener("DOMContentLoaded", (e)=>{
-    // . Desarrollar un diagrama que lea 3 valores diferentes e indique cual es el mayor de ellos, el menor o
-    // si son iguales.
+    // Cálculo de áreas - Elige una figura geométrica:" Triángulo y Círculo
+    // ¿Qué figura quiere calcular (Escriba T o C)?
+    // Triangulo = base * altura / 2
+    // Circulo = PI * radio* radio
     
+    alert (`Cálculo de áreas - Elige una figura geométrica: Triángulo o Círculo`)
+    let dec = (prompt(`¿Qué figura quiere calcular (Digite T o C):`))
 
-    let num1 = Number(prompt(`Escribe un valor 1: `));
-    let num2 = Number(prompt(`Escribe un valor 2: `))
-    let num3 = Number(prompt(`Escribe un valor 3: `))
+    if(dec == `T`){
+        let base = Number(prompt(`Escribe la base del triangulo: `))
+        let height = Number(prompt(`Escribe la altura del triangulo: `))
+        let result = (base * height) / 2
+        console.log(`El area del triangulo es: `, result)
 
-    if(num1 > num2 && num1 > num3){
-        console.log(`El valor 1 es el mayor de los tres`);
     }
-    else if (num2 > num1 && num2 > num3) {
-        console.log(`El valor 2 es el mayor de los tres`)
+    else if (dec == `C`) {
+        let radio = Number(prompt(`Escribe el radio del circulo`))
+        let result1 = Math.PI * Math.pow(radio, 2)
+        console.log(`El area del círculo es: `, result1)
     }
-    else{
-        console.log(`El valor 3 es el mayor de los tres`)
-    }
-    if (num1 < num2 && num1 < num3) {
-        console.log(`El valor 1 es el menor de los tres`)
-    }
-    else if (num2 < num1 && num2 < num3) {
-        console.log(`El valor 2 es el menor de los tres`)
-    }
-    else if (num3 < num1 && num3 < num2) {
-        console.log(`El valor 3 es el menor de los tres`)
-    }
-    if (num1 == num2) {
-        console.log(`El valor 1 (${num1}) es igual al valor 2 (${num2})`)
-    }
-    else if (num2 == num3)
-    {
-        console.log(`El valor 2 (${num2}) es igual al valor 3 (${num3})`)
-    }
-    else if (num1 == num3){
-        console.log(`El valor 1 (${num1}) es igual al valor 3 (${num3})`)
-    }
+    
 })
