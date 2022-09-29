@@ -1,22 +1,16 @@
 addEventListener("DOMContentLoaded", (e)=>{
     
-    // 11. Programa para solicitar el nombre, apellido, edad y la nota promedio de 5 estudiantes de un curso
-    // de computación.
+    // 12. Restarle al primer número al segundo (siempre y cuando el primero sea mayor que él segundo, en
+    // caso contrario indicar con un mensaje que la operación no es posible realizarla.
     
-    acum = 0
-    for (let i = 0; i < 5; i++) {
+    let num1 = Number(prompt(`Ingrese un valor 1`))
+    let num2 = Number(prompt(`Ingrese un valor 2`))
 
-        let nombre = (prompt(`Ingrese su nombre`))
-        let apellido = (prompt(`Ingrese su apellido`))
-        let edad = (prompt(`Ingrese su edad`))
-        let nota = Number(prompt(`Ingrese su nota`))
+    if (num1 > num2) {
+        let operacion = num1 - num2
+        console.log(`El resultado de la sustracción es:`,operacion)
 
-        acum += nota
-        
-        console.log(`Su nombre es ${nombre} ${apellido}, tiene ${edad} años, y su nota es ${nota}`)
+    } else {
+        console.log(`La operacion no es posible realizarla`)
     }
-
-    let prom = acum / 5
-    console.log(`El promedio de las notas es:`,prom)
-    
 })
