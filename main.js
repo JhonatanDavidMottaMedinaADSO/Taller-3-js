@@ -1,18 +1,23 @@
 addEventListener("DOMContentLoaded", (e)=>{
 
-    // Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
-    // $130.000 el descuento será del 15%, de lo contrario no hay descuento.
+    // 8. En cierta empresa se les paga a sus trabajadores de la siguiente forma: si el empleado es de planta,
+    // la hora trabajada se le paga a $20000, si el empleado es administrativo, la hora trabajada se le paga
+    // a $10000. Para calcular su pago es necesario conocer el total de horas trabajadas.
     
-    let consumo = Number(prompt(`Ingrese el consumo en el restaurante`))
+    let rol = (prompt(`¿Es usted empleado de planta o administrativo?`)).toLowerCase()
 
-    if(consumo > 130000){
+    let hora = Number(prompt(`Ingrese la cantidad de horas trabajadas`))
 
-        let desc = consumo - (consumo * 0.15) 
-        console.log(`El valor a pagar con un descuento del 15% es de`,desc)
+    if(rol == `planta`){
+
+        let paga = hora * 20000
+        console.log(`Su pago será de`,paga)
         
-    } else {
+    } else if (rol == `administrativo`){
 
-        console.log(`Lo sentimos no has alcanzado el tope necesario para aplicar al descuento`)
+        let paga = hora * 10000
+        console.log(`Su pago será de`,paga)
+
     }
     
 })
